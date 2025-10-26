@@ -1,0 +1,564 @@
+repita
+    espere()
+até game.IsLoaded e (game.Players.LocalPlayer ou game.Players.PlayerAdded:Wait()) e
+    (jogo.Players.LocalPlayer.Character ou jogo.Players.LocalPlayer.CharacterAdded:Wait())
+local a = Instância.new("ScreenGui")
+local b = Instância.new("Quadro")
+local c = Instância.new("UICorner")
+local d = Instância.new("Quadro")
+local e = Instância.new("ImageButton")
+local f = Instância.new("ImageLabel")
+local g = Instância.new("ImageLabel")
+local h = Instância.new("TextButton")
+local i = Instância.new("TextButton")
+local j = Instância.new("TextLabel")
+local k = Instância.new("TextLabel")
+local l = Instância.new("TextLabel")
+local l = verdadeiro
+jogo.Jogadores.JogadorLocal.Ocioso:conectar(
+    função()
+        enquanto espera(3) faça
+            se eu então
+                jogo.VirtualUser:Button2Down(Vector2.new(0,
+0), espaço de trabalho.CurrentCamera.CFrame)
+                espere(1)
+                jogo.VirtualUser:Button2Up(Vector2.new(0, 0), espaço de trabalho.CurrentCamera.CFrame)
+            fim
+        fim
+    fim
+)
+local l = Instância.new("ScreenGui")
+local m = Instância.new("ImageButton")
+l.Parent = jogo.CoreGui
+l.ZIndexBehavior = Enum.ZIndexBehavior.Irmão
+_G.Primário = Cor3.deRGB(43, 43, 43)
+m.Pai = l
+m.Posição = UDim2.novo(0,120833337, 0, 0,0952890813, 0)
+m.Tamanho = UDim2.novo(0, 50, 0, 50)
+m.BackgroundColor3 = _G.Primário
+m.ImageColor3 = Cor3.fromRGB(255, 255, 255)
+m.Transparência da Imagem = .1
+m.Draggable = verdadeiro
+m.Active = verdadeiro
+m.Selecionável = verdadeiro
+m.Transparência de fundo
+= .1
+m.Imagem = "rbxassetid://4911164158"
+m.Visível = falso
+local l = Instância.new("UICorner")
+l.Nome = "MCNR"
+l.Pai = m
+l.CornerRadius = UDim.novo(0, 5)
+m.MouseButton1Down:conectar(
+    função()
+        m:TweenSize(UDim2.new(0, 40, 0, 40), "Saída", "Quad", 0.2, verdadeiro)
+        espere(0,1)
+        m:TweenSize(UDim2.new(0, 50, 0, 50), "Saída", "Quad", 0.2, verdadeiro)
+        game.CoreGui:FindFirstChild("ScreenGui_Chest").Habilitado =
+            não jogo.CoreGui:FindFirstChild("ScreenGui_Chest").Habilitado
+        m.Visível = falso
+    fim
+)
+fazer
+    se jogo:GetService("CoreGui"):FindFirstChild("ScreenGui_Chest") então
+ 
+       jogo:GetService("CoreGui").ScreenGui_Chest:Destroy()
+        jogo:GetService("CoreGui").ScreenGui:Destroy()
+    fim
+fim
+a.Nome = "ScreenGui_Chest"
+a.Parent = jogo.Jogadores.JogadorLocal:EsperarCriança("GuiaDoJogador")
+a.Parent = jogo.CoreGui
+b.Nome = "Frame_Chest"
+b.Pai = a
+b.BackgroundColor3 = Cor3.fromRGB(43, 43, 43)
+b.BackgroundTransparency = 0,500 -- MODIFICADO: Transparência para o frame principal (borda)
+b.BorderColor3 = Cor3.fromRGB(0, 0, 0)
+b.BorderSizePixel = 0
+b.Draggable = verdadeiro
+b.Ativo = verdadeiro
+b.Selecionável = verdadeiro
+b.Posição = UDim2.new(0,297761381, 0, 0,278439432, 0)
+b.Tamanho = UDim2.novo(0, 281, 0, 164)
+c.Pai = b
+d.Nome = "Frame1_Chest"
+d.Pai = b
+d.BackgroundColor3 = Cor3.fromRGB(38, 38, 38)
+d.BackgroundTransparency = 1.000 -- MODIFICADO: Quadro interno transparente
+d.BorderColor3 = Cor3.fromRGB(0, 0, 0)
+d.BorderSizePixel = 0
+d.Posição = UDim2.novo(0,0246521216, 0, 0,0482814126, 0)
+d.Tamanho = UDim2.novo(0, 266, 0, 147)
+e.Name = "Miminze"
+e.Pai = b
+e.BackgroundColor3 = Cor3.fromRGB(255, 255, 255)
+e.Transparência de fundo = 1.000
+e.BorderColor3 = Cor3.fromRGB(0, 0, 0)
+e.BorderSizePixel = 0
+e.Posição
+= UDim2.novo(0,87502408, 0, 0,0182926822, 0)
+e.Tamanho = UDim2.novo(0, 19, 0, 26)
+e.Image = "http://www.roblox.com/asset/?id=15511995461"
+e.MouseButton1Down:conectar(
+    função()
+        game.CoreGui:FindFirstChild("ScreenGui_Chest").Habilitado =
+            não jogo.CoreGui:FindFirstChild("ScreenGui_Chest").Habilitado
+        m.Visível = verdadeiro
+    fim
+)
+f.Nome = "Logotipo"
+f.Pai = b
+f.BackgroundColor3 = Cor3.fromRGB(255, 255, 255)
+f.Transparência de fundo = 1.000
+f.BorderColor3 = Cor3.fromRGB(0, 0, 0)
+f.BorderSizePixel = 0
+f.Posição = UDim2.novo(0,0246521216, 0, 0,0482814126, 0)
+f.Size = UDim2.new(0, 46, 0, 36) -- MODIFICADO: Tamanho aumentado
+f.Imagem = "rbxassetid://16601446273"
+f.ImageTransparency = 1.000 -- MODIFICADO: Imagem transparente
+g.Nome = "Avatra"
+g.Pai = b
+g.BackgroundColor3 = Cor3.fromRGB(255, 255, 255)
+g.Transparência de fundo = 1.000
+g.BorderColor3 = Cor3.fromRGB(0, 0, 0)
+g.BorderSizePixel = 0
+g.Posição = UDim2.novo(0,0462633446, 0, 0,176829264,
+0)
+g.Tamanho = UDim2.novo(0, 90, 0, 100)
+g.Imagem =
+    game.Players:GetUserThumbnailAsync(
+    jogo.Jogadores.JogadorLocal.UserId,
+    Enum.ThumbnailType.AvatarThumbnail,
+    Enum.TamanhoDaMiniatura.Tamanho420x420
+)
+h.Nome = "BotãoFarmChest"
+h.Pai = b
+h.BackgroundColor3 = Cor3.fromRGB(52, 52, 52)
+h.Transparência de fundo = 0,100
+h.BorderColor3 = Cor3.fromRGB(0, 0, 0)
+h.BorderSizePixel = 0
+h.Posição = UDim2.novo(0,478776932, 0, 0,691130638, 0)
+h.Tamanho = UDim2.novo(0, 121, 0, 28)
+h.Fonte = Enum.Fonte.SourceSansBold
+h.Text = "Localização automática de frutas: LIGADO"
+h.TextColor3 = Color3.fromRGB(255, 255, 255)
+h.TextSize = 14.000
+i.Nome = "Discórdia"
+i.Pai = b
+i.BackgroundColor3 = Cor3.fromRGB(52, 52, 52)
+i.Transparência de fundo = 0,100
+i.BorderColor3 = Cor3.fromRGB(0, 0, 0)
+i.BorderSizePixel = 0
+i.Posição = UDim2.novo(0,4775801, 0, 0,431707233, 0)
+i.Tamanho = UDim2.novo(0, 121, 0, 28)
+i.Fonte = Enum.Fonte.SourceSansBold
+i.Text = "Entrar no Discord"
+i.TextColor3 = Color3.fromRGB(255, 255, 255)
+i.TextSize = 14.000
+i.BotãoDoMouse1ParaBaixo:conectar(
+ 
+   função()
+        definir área de transferência("https://discord.gg/sEdbNRtcFe")
+        i.Text = "Link copiado Noite Mística"
+        espere(.25)
+        i.Text = "Entrar no Discord"
+    fim
+)
+j.Name = "Místico da Noite"
+j.Pai = b
+j.BackgroundColor3 = Cor3.fromRGB(255, 255, 255)
+j.Transparência de fundo = 1.000
+j.BorderColor3 = Cor3.fromRGB(0, 0, 0)
+j.BorderSizePixel = 0
+j.Posição = UDim2.novo(0,0790036023, 0, -0,00593120279, 0)
+j.Tamanho = UDim2.novo(0, 65, 0, 35)
+j.Fonte = Enum.Fonte.SourceSansBold
+j.Text = "Místico Noturno ðŸ©¸"
+j.TextColor3 = Color3.fromRGB(255, 255, 255)
+j.TextSize = 14.000
+k.Nome = "FPS"
+k.Pai = b
+k.BackgroundColor3 = Cor3.fromRGB(255, 255, 255)
+k.Transparência de fundo = 1.000
+k.BorderColor3 = Cor3.fromRGB(0, 0, 0)
+k.BorderSizePixel = 0
+k.Posição
+= UDim2.novo(0,392720729, 0, 0,116020016, 0)
+k.Tamanho = UDim2.novo(0, 65, 0, 27)
+k.Fonte = Enum.Fonte.SourceSansBold
+k.Texto = "FPS: "
+k.TextColor3 = Color3.fromRGB(255, 255, 255)
+k.TamanhoDoTexto = 14.000
+função UpdateFPS()
+    local a = espaço de trabalho:GetRealPhysicsFPS()
+    k.Texto = "FPS: " .. a
+fim
+desovar(
+    função()
+        enquanto verdadeiro faça
+            espere(.1)
+            Atualizar FPS()
+        fim
+    fim
+)
+
+--------------------------------------------------
+-- INÍCIO DO CÓDIGO DO FRUIT ESP ADICIONADO AQUI --
+--------------------------------------------------
+
+-- Cria uma GUI principal do ESP (Se o script principal já não tiver uma)
+ScreenGui_ESP local = Instância.new("ScreenGui")
+ScreenGui_ESP.Parent = jogo:GetService("CoreGui")
+ScreenGui_ESP.Name = "FruitESP_GUI"
+
+-- Função para criar o ESP para cada fruta
+função local criarESP(fruta)
+    se fruta:FindFirstChild("Handle") então
+        outdoor local = Instance.new("BillboardGui")
+        outdoor.Parent = fruta.Handle
+        outdoor.Adornee = fruta.Alça
+        outdoor.Tamanho = UDim2.novo(0, 100, 0, 50)
+        billboard.AlwaysOnTop = verdadeiro
+
+        textLabel local = Instância.new("TextLabel")
+        textLabel.Parent = outdoor
+        textLabel.Size = UDim2.new(1, 0, 1, 0)
+        textLabel.BackgroundTransparency = 1
+        textLabel.TextColor3 = Color3.fromRGB(170, 0, 255) -- Roxo néon
+        textLabel.TextStrokeTransparency = 0
+        textLabel.TextScaled = verdadeiro
+        textLabel.Font = Enum.Font.GothamBold
+        textLabel.Text = fruta.Nome
+
+        -- Atualiza constantemente enquanto a fruta existe
+        -- Este spawn monitora se a fruta ainda existe.
+        spawn(função()
+            enquanto fruta.Os pais fazem
+                espere(0,1)
+            fim
+            -- Remover o ESP quando a fruta for coletada
+            outdoor:Destruir()
+        fim)
+    fim
+fim
+
+-- Função para verificar novas frutas no mapa
+função local verificarFrutas()
+    para _, frutas em pares(workspace:GetChildren()) faça
+        -- Verifique se o nome contém "Fruit" e se o ESP já foi adicionado
+        se fruit.Name:match("Fruit") e não fruit:GetAttribute("ESP_Added") então
+            -- Adiciona um atributo para evitar que o ESP seja criado duas vezes
+            fruta:SetAttribute("ESP_Added", verdadeiro)
+            criarESP(fruta)
+        fim
+    fim
+fim
+
+-- Loop para atualizar o ESP constantemente
+-- Este spawn executa a verificação de frutas em um loop separado
+spawn(função()
+    enquanto verdadeiro faça
+        verificarFrutas()
+        espere(1)
+    fim
+fim)
+
+----------------------------------------------
+-- FIM DO CÓDIGO DO FRUIT ESP ADICIONADO AQUI --
+----------------------------------------------
+
+se Ran então
+    retornar
+outro
+    getgenv().Ran = verdadeiro
+fim
+se
+jogo:GetService("Jogadores").LocalPlayer.PlayerGui:WaitForChild("Principal", 9e9):FindFirstChild("EscolherTime") então
+    jogo:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", "Piratas")
+    espere(3)
+fim
+local a = jogo.Jogadores.JogadorLocal
+local b = a.Caractere
+local c = jogo.TweenService
+local d = Instância.new("VelocidadeDoCorpo")
+d.MaxForce = Vetor3.novo(1 / 0, 1 / 0, 1 / 0)
+d.Velocidade = Vetor3.novo()
+d.Nome = "bV"
+local e = Instância.new("BodyAngularVelocity")
+e.Velocidade Angular = Vetor3.novo()
+e.MaxTorque = Vector3.new(1/0, 1/0, 1/0)
+e.Nome = "bAV"
+para f, f em seguida, workspace:GetChildren() faça
+    se f.Name:find("Fruta") e (f:IsA("Ferramenta") ou f:IsA("Modelo")) então
+        repita
+            local d = d:Clone()
+       
+     d.Pai = b.ParteRaizHumanoide
+            local e = e:Clone()
+            e.Pai = b.ParteRaizHumanoide
+            local a =
+                c:Criar(
+                b.ParteRaizHumanoide,
+                TweenInfo.new((a:DistanceFromCharacter(f.Handle.Position) -
+150) / 300, Enum.EasingStyle.Linear),
+                {CFrame = f.Handle.CFrame + Vetor3.novo(0, f.Handle.Tamanho.Y, 0)}
+            )
+            a:Reproduzir()
+            a.Concluído:Esperar()
+            b.HumanoidRootPart.CFrame = f.Handle.CFrame
+            d:Destruir()
+            e:Destruir()
+ 
+           espere(1)
+        até f.Parent ~= espaço de trabalho
+        espere(1)
+        local a =
+            b:FindFirstChildOfClass("Ferramenta") e b:FindFirstChildOfClass("Ferramenta").Nome:find("Fruta") e
+            b:FindFirstChildOfClass("Ferramenta") ou
+            (função()
+                para um, um em
+a.Backpack:GetChildren() do
+                    se a.Nome:find("Fruta") então
+                        retornar um
+                    fim
+                fim
+            fim)()
+    
+    imprimir(a)
+        jogo:GetService("ArmazenamentoReplicado").Remotes.CommF_:InvokeServer(
+            "Frutas da Loja",
+            a:GetAttribute("NomeOriginal"),
+            um
+        )
+    fim
+fim
+para a, a em pares(jogo:GetService("Workspace"):GetChildren()) faça
+    se a:IsA("Ferramenta") e string.find(a.Nome, "Fruta") então
+        NomeFruta = a.Nome
+    fim
+fim
+print(NomeFruta)
+desovar(
+    função()
+        
+pcall(
+            função()
+                enquanto espera(.1) faça
+                    se _G.AutoStoreFruit então
+                        para a, a em pares(NomeFruta) faça
+                   
+         jogo:GetService("ArmazenamentoReplicado").Remotes.CommF_:InvokeServer("StoreFruit", a)
+                        fim
+                    fim
+                fim
+            fim
+        )
+    fim
+)
+local a = jogo.JobId
+repita
+   
+ tarefa.spawn(
+        pcall,
+        função()
+            Tempo = 0,1
+            repita
+                espere()
+            até o jogo:IsLoaded()
+            esperar(Tempo)
+            local a = jogo.PlaceId
+ 
+           local b = {}
+            local c = ""
+            local d = os.date("!*t").hora
+            local e = falso
+            função TPReturner()
+                local e
+           
+     se c == "" então
+                    e =
+                        jogo.HttpService:JSONDecode(
+                        jogo:HttpGet(
+                      
+      "https://games.roblox.com/v1/games/" .. a .. "/servers/Public?sortOrder=Asc&limit=100"
+                        )
+                    )
+                outro
+                    e =
+         
+               jogo.HttpService:JSONDecode(
+                        jogo:HttpGet(
+                            "https://games.roblox.com/v1/games/" ..
+                                
+um .. "/servidores/Público?sortOrder=Asc&limit=100&cursor=" .. c
+                        )
+                    )
+                fim
+                local f = ""
+                se
+e.nextPageCursor e e.nextPageCursor ~= "null" e e.nextPageCursor ~= nil então
+                    c = e.nextPageCursor
+                fim
+                local c = 0
+                para e, e em pares(e.data) faça
+             
+       local g = verdadeiro
+                    f = tostring(e.id)
+                    se tonumber(e.maxPlayers) > tonumber(e.playing) então
+                        para a, a em pares(b) faça
+               
+             se c ~= 0 então
+                                se f == tostring(a) então
+                                    g = falso
+         
+                       fim
+                            outro
+                                se tonumber(d) ~= tonumber(a) então
+             
+                       local a =
+                                        pcall(
+                                   
+     função()
+                                            delfile("NotSameServers.json")
+                                            b = {}
+     
+                                       tabela.inserir(b, d)
+                                        fim
+                    
+                )
+                                fim
+                            fim
+                        
+    c = c + 1
+                        fim
+                        se g == verdadeiro então
+                            tabela.inserir(b, f)
+           
+                 espere()
+                            pcall(
+                                função()
+                       
+             writefile("NotSameServers.json", jogo:GetService("HttpService"):JSONEncode(b))
+                                    espere()
+                                    jogo:GetService("TeleportService"):TeleportToPlaceInstance(
+              
+                          um,
+                                        f,
+                                  
+      jogo.Jogadores.JogadorLocal
+                                    )
+                                fim
+                          
+  )
+                            espere(4)
+                        fim
+                    fim
+                fim
+          
+  fim
+            função Teleport()
+                enquanto espera() faz
+                    pcall(
+                        função()
+                       
+     TPReturner()
+                            se c ~= "" então
+                                TPReturner()
+                            fim
+   
+                     fim
+                    )
+                fim
+            fim
+            Teletransporte()
+        fim
+    )
+    espere()
+até game.JobId ~=
+um
+
+-- Evita execução múltipla
+se getgenv().WebhookJaExecutado então
+    warning("âš ï¸ O webhook já foi executado antes. Ignorando nova execução.")
+    retornar
+outro
+    getgenv().WebhookJaExecutado = verdadeiro
+fim
+
+-- Configuração do webhook
+webhook local = getgenv().FruitWebhook ou ""
+se webhook == "" então
+    warning("Nenhum webhook configurado! Defina getgenv().FruitWebhook antes de executar o script.")
+    retornar
+fim
+
+local HttpService = jogo:GetService("HttpService")
+Jogadores locais = jogo:GetService("Jogadores")
+Armazenamento Replicado local = jogo:GetService("Armazenamento Replicado")
+
+plr local = Jogadores.JogadorLocal
+ID do usuário local = plr.UserId
+
+-- avatar do jogador
+avatarUrl local = "https://www.roblox.com/headshot-thumbnail/image?userId="..userId.."&width=420&height=420&format=png"
+--imagem fixa do bot (sua imagem roxa)
+botIcon local = "https://i.imgur.com/Nk1a89M.jpeg"
+-- link do perfil do jogador
+profileUrl local = "https://www.roblox.com/users/"..userId.."/profile"
+
+comm local = ReplicatedStorage:WaitForChild("Remotos"):WaitForChild("CommF_")
+
+função local sendWebhook(fruta)
+    dados locais = {
+        ["nome de usuário"] = "Místico da Noite",
+        ["avatar_url"] = botIcon,
+        ["incorpora"] = {{
+            ["title"] = "Localizador de frutas --- [Junte-se ao servidor Night Mystic](<https://discord.gg/sEdbNRtcFe>)",
+            ["description"] = "armazenou uma fruta no inventário",
+            ["cor"] = 139,
+            ["miniatura"] = {["url"] = avatarUrl},
+            ["campos"] = {
+                {["nome"] = "jogador", ["valor"] = "["..plr.Nome.."]("..profileUrl..")", ["inline"] = verdadeiro},
+                {["name"] = "ðŸ Ž Fruit", ["value"] = fruta ou "Desconhecida", ["inline"] = true},
+                {["nome"] = "ðŸŒ PlaceId", ["valor"] = tostring(game.PlaceId), ["inline"] = true},
+            },
+            ["footer"] = {["text"] = "Horário: " .. os.date("%d/%m/%Y %H:%M:%S"), ["icon_url"] = botIcon}
+        }}
+    }
+
+    req local = http_request ou request ou syn e syn.request
+    se req então
+        req({
+            Url = webhook,
+            Método = "POST",
+            Cabeçalhos = {["Content-Type"] = "application/json"},
+            Corpo = HttpService:JSONEncode(dados)
+        })
+        print("[âœ…] Webhook enviado com sucesso!")
+    outro
+        warning("O executor não suporta http_request")
+    fim
+fim
+
+-- gancho corrigido
+local antigo
+antigo = hookmetamethod(jogo, "__namecall", função(self, ...)
+    argumentos locais = {...}
+    método local = getnamecallmethod()
+    
+    se self == comm e method == "InvokeServer" e args[1] == "StoreFruit" então
+        local result = old(self, ...) -- pega o retorno do servidor
+        se resultado == verdadeiro ou resultado == "Sucesso" então
+            sendWebhook(args[2]) -- só envio se armazenou o mesmo
+        fim
+        retornar resultado
+    fim
+    
+    retornar antigo(self, ...)
+fim)
+
+print("por araujo7xp")
+
+se typeof(StartFruitFinder) == "função" então
+    IniciarFruitFinder()
+fim
